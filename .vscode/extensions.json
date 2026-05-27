@@ -1,0 +1,6 @@
+{
+  // PlatformIO IDE extension recommendation
+  "recommendations": [
+    "platformio.platformio-ide"
+  ]
+}
