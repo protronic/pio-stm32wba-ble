@@ -1,0 +1,53 @@
+{
+  "build": {
+    "core": "arduino",
+    "cpu": "cortex-m33",
+    "extra_flags": "-DSTM32WBA5xx -DSTM32WBAxx -mfpu=fpv5-sp-d16 -mfloat-abi=hard",
+    "f_cpu": "100000000L",
+    "mcu": "stm32wba5mmghx",
+    "product_line": "STM32WBA5xx",
+    "variant": "B_WBA5M_WPAN"
+  },
+  "connectivity": [
+    "bluetooth"
+  ],
+  "debug": {
+    "jlink_device": "STM32WBA5MMGHx",
+    "openocd_target": "stm32wba5x",
+    "svd_path": "STM32WBA52_CM33.svd",
+    "tools": {
+      "stlink": {
+        "server": {
+          "arguments": [
+            "-f",
+            "interface/stlink.cfg",
+            "-c",
+            "transport select hla_swd",
+            "-f",
+            "target/stm32wba5x.cfg",
+            "-c",
+            "reset_config none"
+          ],
+          "executable": "openocd",
+          "package": "tool-openocd"
+        }
+      }
+    }
+  },
+  "frameworks": [
+    "arduino"
+  ],
+  "id": "b_wba5m_wpan",
+  "name": "ST B-WBA5M-WPAN (STM32WBA5MMG)",
+  "upload": {
+    "maximum_ram_size": 524288,
+    "maximum_size": 1048576,
+    "protocol": "stlink",
+    "protocols": [
+      "stlink",
+      "jlink"
+    ]
+  },
+  "url": "https://www.st.com/en/evaluation-tools/b-wba5m-wpan.html",
+  "vendor": "ST"
+}
